@@ -38,7 +38,7 @@ route.get('/knockout-stage/:idTeam', homeController.getKnockoutStageById);
 route.get('/statistic', homeController.getStatistic);
 
 // post 
-// route.get('/posts', homeController.getAllPost);
+route.get('/posts', homeController.getAllPost);
 route.get('/posts/:idTeam', homeController.getPostAboutTeam);
 route.get('/post/:matchId', homeController.getPostAboutMatch);
 

@@ -216,10 +216,14 @@ const getPlayerByTeam = async (req, res) => {
 const getPostAboutTeam = async (req, res) => {
     try {
         const id = req.params.idTeam;
-        Data("team").collectionName
-            .find({ country: id })
-            .project({ post: 1 })
-            .forEach(result => {
+        Data("post").collectionName
+            .find({
+                type: "teamPost",
+                teamId: id
+            })
+            .project({ teamId: 1, header: 1, URL: 1, imgUrl: 1 })
+            .toArray((err, result) => {
+                if (err) throw err;
                 res.status(200).json(result);
             })
     } catch (error) {
@@ -230,12 +234,16 @@ const getPostAboutTeam = async (req, res) => {
 // lấy bài báo về trận đấu
 const getPostAboutMatch = async (req, res) => {
     try {
-        const id_match = req.params.matchId;
-        (Data("match")).collectionName
-            .find({ id: Number(id_match) })
-            .project({ post: 1 })
-            .forEach(result => {
-                res.status(200).json(result)
+        const id = req.params.matchId;
+        Data("post").collectionName
+            .find({
+                type: "matchPost",
+                matchId: Number(id)
+            })
+            .project({ matchId: 1, header: 1, URL: 1, imgUrl: 1 })
+            .toArray((err, result) => {
+                if (err) throw err;
+                res.status(200).json(result);
             })
     } catch (error) {
         res.status(500).json(error);
@@ -243,36 +251,19 @@ const getPostAboutMatch = async (req, res) => {
 }
 
 // lấy danh sách tất cả bài báo
-// const getAllPost = async (req, res) => {
-//     try {
-//         const cursor = Data("team").collectionName
-//             .aggregate([{
-//                 $lookup: {
-//                     from: "match",
-//                     localField: "country",
-//                     foreignField: "home_team_country",
-//                     as: "allPost"
-//                 }
-//             }])
-
-//         cursor.find({})
-//             .project({ allPost: 1 })
-//             .toArray((err, result) => {
-//                 if (err) throw err;
-//                 res.status(200).json(result);
-//             })
-
-//         // Data("team").collectionName
-//         //     .find({})
-//         //     .project({ post: 1 })
-//         //     .forEach(result => {
-//         //         res.status(200).json(result);
-//         //     })
-
-//     } catch (error) {
-//         res.status(500).json(error);
-//     }
-// }
+const getAllPost = async (req, res) => {
+    try {
+        Data("post").collectionName
+            .find({})
+            .project({ header: 1, URL: 1, imgUrl: 1 })
+            .toArray((err, result) => {
+                if (err) throw err;
+                res.status(200).json(result);
+            })
+    } catch (error) {
+        res.status(500).json(error);
+    }
+}
 
 // lấy thống kê của giải đấu 
 const getStatistic = async (req, res) => {
@@ -345,7 +336,7 @@ module.exports = {
     getAllKnockoutStage, getKnockoutStageById,
     getAllMatches, getMatch,
     getPlayer, getAllPlayers, getTopPlayer, getPlayerByTeam,
-    getPostAboutMatch, getPostAboutTeam,
+    getPostAboutMatch, getPostAboutTeam, getAllPost,
     getStatistic,
     getTeam, getAllTeams,
     getAllVenue, getVenue
