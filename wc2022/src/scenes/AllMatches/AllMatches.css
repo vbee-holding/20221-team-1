@@ -1,0 +1,28 @@
+.all-matches {
+    width: calc(100vw/1.5);
+    margin: 0 auto;
+    background-color: rgb(88, 81, 81);
+    /* margin-left: 10px; */
+}
+
+.date-match {
+    color: white;
+    font-size: medium;
+    text-decoration: underline;
+    margin-bottom: 7px;
+}
+
+.about-day-match {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+
+    width: calc(100vw/1.6);
+    margin: 0 auto;
+}
+
+/* @media screen and (max-width: 769px) {
+    .all-matches {
+        width: 95vw;
+    }
+} */
