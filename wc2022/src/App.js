@@ -8,7 +8,7 @@ import AllMatches from './scenes/AllMatches/AllMatches';
 // import MatchBracket from './scenes/MatchBracket/MatchBracket';
 // import Ranking from './scenes/Ranking/Ranking';
 // import Statistic from './scenes/Statistic/Statistic';
-// import TopPlayer from './scenes/TopPlayer/TopPlayer'
+import TopPlayer from './scenes/TopPlayer/TopPlayer'
 
 function App() {
   return (
@@ -17,15 +17,15 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<AllMatches />}></Route>
-          {/* <Route path='/matches/:id' element={<DetailMatch />}></Route>
+          {/* <Route path='/matches/:id' element={<DetailMatch />}></Route> */}
           <Route path='/topPlayer' element={<TopPlayer />}></Route>
-          <Route path='/statistic' element={<Statistic />}></Route>
-          <Route path='/posts' element={<AllPost />}></Route>
-          <Route path='/team/:idTeam/post' element={<PostAboutTeam />}></Route>
+          {/* <Route path='/statistic' element={<Statistic />}></Route> */}
+          {/* <Route path='/posts' element={<AllPost />}></Route> */}
+          {/* <Route path='/team/:idTeam/post' element={<PostAboutTeam />}></Route> */}
 
-          <Route path='/team/:id' element={<DetailTeam />}></Route>
-          <Route path='/bracket' element={<MatchBracket />}></Route>
-          <Route path='/rank' element={<Ranking />}></Route> */}
+          {/* <Route path='/team/:id' element={<DetailTeam />}></Route> */}
+          {/* <Route path='/bracket' element={<MatchBracket />}></Route> */}
+          {/* <Route path='/rank' element={<Ranking />}></Route> */}
         </Routes>
       </Router>
     </div>
