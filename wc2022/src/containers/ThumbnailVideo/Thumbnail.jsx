@@ -1,10 +1,9 @@
-const Thumbnail = (props) => {
-    const url = props.link;
-    const newUrl = url.replace('watch?v=', 'embed/');
-    const finalUrl = newUrl.replace('&feature=onebox', '');
+const Thumbnail = ({ link }) => {
+    const url = link.replace('watch?v=', 'embed/');
+    const finalUrl = url.replace('&feature=onebox', '');
 
     return (
-        <iframe src={finalUrl} frameborder="0" allowFullScreen width={80 + '%'} height={500 + 'px'} ></iframe >
+        <iframe src={finalUrl} allowFullScreen width={80 + '%'} height={500 + 'px'} ></iframe >
     )
 }
 

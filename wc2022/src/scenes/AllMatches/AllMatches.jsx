@@ -7,10 +7,6 @@ import "./AllMatches.css"
 const AllMatches = () => {
     const [matches, setMatches] = useState([]);
 
-    useEffect(() => {
-        loadMatches();
-    }, [])
-
     const loadMatches = async () => {
         const result = await getAllMatch();
         setMatches(result);
@@ -35,13 +31,18 @@ const AllMatches = () => {
         else return date1.day - date2.day;
     })
 
+    useEffect(() => {
+        loadMatches();
+    }, [])
+
+
     return (
         <div className="all-matches">
             *Nếu trang không hiển thị gì, vui lòng refresh lại trang
             {matches && dateMatch &&
                 dateMatch.map((date, index) => {
                     return (
-                        <div>
+                        <div key={index}>
                             <div className="date-match">
                                 Ngày thi đấu {`${date.day}-${date.month}`}
                             </div>

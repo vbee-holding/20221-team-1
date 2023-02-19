@@ -20,9 +20,3 @@
     width: calc(100vw/1.6);
     margin: 0 auto;
 }
-
-/* @media screen and (max-width: 769px) {
-    .all-matches {
-        width: 95vw;
-    }
-} */

@@ -49,3 +49,22 @@
     margin-top: 3px;
     margin-left: 50px;
 }
+
+.info-for-statistic {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-team-num {
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw/3);
+    float: right;
+    margin-left: auto;
+}
+
+.num-player-for-statistic {
+    float: right;
+    margin-left: auto;
+    padding-right: 5px;
+}

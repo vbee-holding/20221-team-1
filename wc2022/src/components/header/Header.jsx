@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
-
 import './Header.css'
 
 const Header = () => {
@@ -25,8 +24,7 @@ const Header = () => {
                 <ul id="navbar" className={state ? "#navbar active" : "#navbar"}>
                     <li onClick={reload} ><NavLink className='a_nav' to='/'>Trận đấu</NavLink></li>
                     <li onClick={reload}><NavLink className='a_nav' to='/posts'>Tin tức</NavLink></li>
-                    <li onClick={reload}><NavLink className='a_nav' to='/knockout'>Sơ đồ thi đấu</NavLink></li>
-                    {/* <li onClick={reload}><NavLink className='a_nav' to='/coaches'>Huấn luyện viên</NavLink></li> */}
+                    <li onClick={reload}><NavLink className='a_nav' to='/bracket'>Sơ đồ thi đấu</NavLink></li>
                     <li onClick={reload}><NavLink className='a_nav' to='/topPlayer'>Cầu thủ</NavLink></li>
                     <li onClick={reload}><NavLink className='a_nav' to='/rank'>Bảng xếp hạng</NavLink></li>
                     <li onClick={reload}><NavLink className='a_nav' to='/statistic'>Số liệu thống kê</NavLink></li>
@@ -40,4 +38,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;

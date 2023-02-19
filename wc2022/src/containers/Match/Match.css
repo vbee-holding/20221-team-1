@@ -6,11 +6,6 @@
     flex-direction: row;
 }
 
-/* .about-match:hover {
-    cursor: pointer;
-    opacity: 1.5;
-} */
-
 .my-nav-link-match:hover {
     cursor: pointer;
     opacity: 0.9;
@@ -22,7 +17,6 @@
 }
 
 .left__about-match {
-    /* flex-grow: 1; */
     width: calc(100vw/5.5);
     border-right: 1px solid white;
 }
@@ -53,4 +47,29 @@
     float: right;
     margin-left: auto;
     text-align: center;
+}
+
+.info-match-for-statistic {
+    display: flex;
+    flex-direction: row;
+}
+
+.match-num-time-for-statistic {
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw/3);
+    float: right;
+    margin-left: auto;
+}
+
+.num-attend-for-statistic {
+    float: right;
+    margin-left: auto;
+    padding-right: 5px;
+}
+
+.left__about-match-for-bracket {
+    background-color: gray;
+    width: calc(100vw/5.5);
+    border-right: 1px solid white;
 }
