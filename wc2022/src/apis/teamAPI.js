@@ -1,9 +1,11 @@
 import axios from "axios";
-import Link from "../constants/Link";
-
-const url = Link.url_team;
+import DOMAIN from "../config";
 
 export const getTeam = async (country) => {
-    const result = await axios.get(url + country);
-    return result.data;
+    try {
+        const result = await axios.get(`${DOMAIN}/teams/` + country);
+        return result.data;
+    } catch (error) {
+        console.log(error);
+    }
 }

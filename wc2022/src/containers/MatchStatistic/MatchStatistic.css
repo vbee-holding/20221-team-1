@@ -1,0 +1,54 @@
+.match-statistic {
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.match-statistic-detail {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.home-team-statistic-info {
+    float: left;
+    margin-right: auto;
+}
+
+.away-team-statistic-info {
+    float: right;
+    margin-left: auto;
+}
+
+.demo {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.home-team-statistic-info,
+.away-team-statistic-info {
+    text-align: center;
+}
+
+.match-statistic-about {
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.home-statis-info {
+    float: left;
+    margin-right: auto;
+}
+
+.away-statis-info {
+    float: right;
+    margin-left: auto;
+}

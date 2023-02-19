@@ -17,7 +17,7 @@ const DetailTeam = () => {
 
     return (
         <div>
-            <div style={{ color: 'white', textAlign: 'center', backgroundColor: '#56042C', border: '1px solid wheat' }}>Thông tin về team {idTeam}</div>
+            <div style={{ color: 'white', textAlign: 'center', backgroundColor: '#56042C', border: '1px solid wheat' }}>Thông tin về {idTeam}</div>
             <SubNavForTeam />
             <div className="match-team-group-knock">
                 {
@@ -50,8 +50,6 @@ const DetailTeam = () => {
                             </div>
                         </>)
                 }
-
-
             </div>
         </div>
     )

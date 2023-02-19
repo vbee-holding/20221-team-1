@@ -10,7 +10,7 @@
     width: calc(100vw/1.5);
     margin: 0 auto;
     color: white;
-    background-color: gray;
+    background-color: rgb(39, 34, 34);
 }
 
 .detail-match-score {
@@ -95,5 +95,75 @@
 }
 
 .video-highlight {
+    text-align: center;
+}
+
+.detail-match-tab {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coach-team {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    border: 1px solid wheat;
+    color: white;
+}
+
+.coach-home-team {
+    float: left;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.coach-away-team {
+    float: right;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.stadium {
+    text-align: center;
+}
+
+.bench-team {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bench-team-demo {
+    text-align: center;
+}
+
+.bench-team-detail {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid wheat;
+    margin-bottom: 10px;
+    color: whi;
+}
+
+.bench-home-team {
+    flex-grow: 1;
+    text-align: center;
+    border-right: 1px solid wheat;
+}
+
+.bench-away-team {
+    float: right;
+    margin-left: auto;
+    flex-grow: 1;
     text-align: center;
 }

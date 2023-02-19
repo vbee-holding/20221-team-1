@@ -1,9 +1,11 @@
 import axios from "axios"
-import Link from "../constants/Link";
-
-const url = Link.url_knockout;
+import DOMAIN from "../config";
 
 export const getKnockoutByTeam = async (idTeam) => {
-    const result = await axios.get(url + idTeam);
-    return result.data;
+    try {
+        const result = await axios.get(`${DOMAIN}/knockout-stage/` + idTeam);
+        return result.data;
+    } catch (error) {
+        console.log(error);
+    }
 }

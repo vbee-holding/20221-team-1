@@ -1,14 +1,21 @@
 import axios from 'axios';
-import Link from '../constants/Link';
-
-const url = Link.url_match;
+import DOMAIN from '../config';
 
 export const getAllMatch = async () => {
-    const result = await axios.get(url);
-    return result.data;
+    try {
+        const result = await axios.get(`${DOMAIN}/matches`);
+        return result.data;
+    } catch (error) {
+        console.log(error);
+    }
+
 }
 
 export const getMatch = async (id) => {
-    const result = await axios.get(url + id);
-    return result.data;
+    try {
+        const result = await axios.get(`${DOMAIN}/matches/` + id);
+        return result.data;
+    } catch (error) {
+        console.log(error);
+    }
 }

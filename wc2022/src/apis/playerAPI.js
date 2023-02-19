@@ -1,16 +1,29 @@
 import axios from "axios"
-import Link from "../constants/Link";
-
-const url_topPlayer = Link.url_player.url_topPlayer;
-const url_player = Link.url_player.url_playerById;
+import DOMAIN from "../config";
 
 export const getTopPlayer = async () => {
-    const result = await axios.get(url_topPlayer);
-    return result.data;
+    try {
+        const result = await axios.get(`${DOMAIN}/players-top50`);
+        return result.data;
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 export const getPlayer = async (id) => {
-    const result = await axios.get(url_player + id);
-    return result.data;
+    try {
+        const result = await axios.get(`${DOMAIN}/players/` + id);
+        return result.data;
+    } catch (error) {
+        console.log(error);
+    }
 }
 
+export const getPlayerByTeam = async (idTeam) => {
+    try {
+        const result = await axios.get(`${DOMAIN}/player/` + idTeam)
+        return result.data;
+    } catch (error) {
+        console.log(error);
+    }
+}

@@ -4,22 +4,22 @@ import Player from "../../containers/Player/Player";
 import './TopPlayer.css'
 
 const TopPlayer = () => {
-    const [topPlayer, setTopPlayer] = useState([]);
+    const [topPlayers, setTopPlayers] = useState([]);
 
     useEffect(() => {
-        loadTopPlayer();
+        loadTopPlayers();
     }, [])
 
-    const loadTopPlayer = async () => {
+    const loadTopPlayers = async () => {
         const result = await getTopPlayer();
-        setTopPlayer(result);
+        setTopPlayers(result);
     }
 
     return (
         <div className="top-player">
-            {topPlayer.map((player, index) => {
+            {topPlayers.map((player, index) => {
                 return (
-                    <div>
+                    <div key={index}>
                         <Player playerId={player.id} />
                     </div>
                 )
