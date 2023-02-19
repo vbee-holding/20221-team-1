@@ -11,9 +11,3 @@ export const SubNavForTeam = (props) => {
         </ul>
     )
 }
-
-// export const SubNavForMatch = () => {
-//     refer: https://mui.com/material-ui/react-tabs/
-//      có thể tách thành file riêng
-// }
-
