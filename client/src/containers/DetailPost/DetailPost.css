@@ -1,0 +1,23 @@
+.detail-post {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid wheat;
+    width: calc(100vw/2.5);
+    margin-bottom: 5px;
+    background-color: rgb(39, 34, 34);
+}
+
+.img-post {
+    flex-grow: 1;
+    width: 200px;
+    height: 125px;
+    margin-right: 5px;
+}
+
+.header-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
