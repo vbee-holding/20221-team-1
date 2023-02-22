@@ -1,0 +1,26 @@
+.sub-nav {
+    background-color: #56042C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    margin: 0 0 0 0;
+}
+
+.sub-nav li {
+    padding: 10px 20px;
+}
+
+.sub-nav li:hover {
+    background: #962d4c;
+    border-bottom: solid 2px #fff;
+    cursor: pointer;
+}
+
+.navlink_sub_nav {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
