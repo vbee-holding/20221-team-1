@@ -48,7 +48,7 @@ nav {
     color: #fff;
 }
 
-/* @media screen and (max-width: 769px) {
+ @media screen and (max-width: 769px) {
     nav {
         justify-content: space-between;
     }
@@ -59,8 +59,8 @@ nav {
         align-items: flex-start;
         justify-content: flex-start;
         position: fixed;
-        top: 75px;
-        right: -250px;
+        top: 60px;
+        right: -270px;
         width: 250px;
         height: 100vh;
         background: #56042C;
@@ -83,4 +83,4 @@ nav {
 
     }
 
-} */
+}

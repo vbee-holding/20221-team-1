@@ -81,19 +81,26 @@ const Match = (props) => {
             {match && isBracket && (
                 <NavLink to={`/matches/${id}`} className='my-nav-link-match'>
                     <div className="left__about-match-for-bracket">
-                        <div className="name-stage">
-                            {match.stage_name}
+                        <div className="name-stage-bracket">
+                            <h4>{match.stage_name}{` - ${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}</h4>  
                         </div>
+                        
                         {
                             home_team && away_team && homeTeam && awayTeam && (
                                 <div className="info-match">
                                     <div className="img"><img className="img-match-team" src={homeTeam[0]} alt="team" /></div>
                                     <div className="team-name"><h4>{match.home_team.name}</h4></div>
-                                    <div className="team-goal"><h4>{`${match.home_team.goals} (${match.home_team.penalties})`}</h4></div>
+                                    <div className="team-goal"><h4>{match.home_team.goals}{match.home_team.goals === match.away_team.goals ? (
+                                        ` (PK ${match.home_team.penalties})`
+                                    ) : null}</h4>
+                                    </div>
 
                                     <div className="img"><img className="img-match-team" src={awayTeam[0]} alt="team" /></div>
                                     <div className="team-name"><h4>{match.away_team.name}</h4></div>
-                                    <div className="team-goal"><h4>{`${match.away_team.goals} (${match.away_team.penalties})`}</h4></div>
+                                    <div className="team-goal"><h4>{match.away_team.goals}{match.home_team.goals === match.away_team.goals ? (
+                                        ` (PK ${match.away_team.penalties})`
+                                    ) : null}</h4>
+                                    </div>
                                 </div>
                             )
                         }
