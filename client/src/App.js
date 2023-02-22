@@ -2,7 +2,7 @@ import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/header/Header';
 import AllMatches from './scenes/AllMatches/AllMatches';
 import { AllPost, PostAboutTeam } from './scenes/AllPosts/Post';
-// import DetailMatch from './scenes/DetailMatch/DetailMatch';
+import DetailMatch from './scenes/DetailMatch/DetailMatch';
 import DetailTeam from './scenes/DetailTeam/DetailTeam';
 import MatchBracket from './scenes/MatchBracket/MatchBracket';
 import PlayerByTeam from './scenes/PlayerByTeam/PlayerByTeam';
@@ -19,7 +19,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<AllMatches />}></Route>
-          {/* <Route path='/matches/:id' element={<DetailMatch />}></Route> */}
+          <Route path='/matches/:id' element={<DetailMatch />}></Route>
           <Route path='/topPlayer' element={<TopPlayers />}></Route>
           <Route path='/statistic' element={<Statistic />}></Route>
           <Route path='/posts' element={<AllPost />}></Route>
