@@ -1,0 +1,7 @@
+.top-player {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    width: fit-content;
+    margin: 0 auto;
+}

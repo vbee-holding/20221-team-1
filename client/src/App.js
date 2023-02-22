@@ -9,7 +9,7 @@ import AllMatches from './scenes/AllMatches/AllMatches';
 // import RankByTeam from './scenes/RankByTeam/RankByTeam';
 // import Ranking from './scenes/Ranking/Ranking';
 // import Statistic from './scenes/Statistic/Statistic';
-// import TopPlayer from './scenes/TopPlayer/TopPlayer'
+import TopPlayers from './scenes/TopPlayer/TopPlayer'
 import './App.css';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path='/' element={<AllMatches />}></Route>
           {/* <Route path='/matches/:id' element={<DetailMatch />}></Route> */}
-          {/* <Route path='/topPlayer' element={<TopPlayer />}></Route> */}
+          <Route path='/topPlayer' element={<TopPlayers />}></Route>
           {/* <Route path='/statistic' element={<Statistic />}></Route> */}
           {/* <Route path='/posts' element={<AllPost />}></Route> */}
           {/* <Route path='/team/:id' element={<DetailTeam />}></Route> */}
