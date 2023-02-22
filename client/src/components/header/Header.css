@@ -4,7 +4,6 @@ nav {
     justify-content: center;
     background: #56042C;
     padding: 10px 10px 0px 10px;
-
 }
 
 #logo_wc {
@@ -49,7 +48,7 @@ nav {
     color: #fff;
 }
 
-@media screen and (max-width: 769px) {
+/* @media screen and (max-width: 769px) {
     nav {
         justify-content: space-between;
     }
@@ -84,4 +83,4 @@ nav {
 
     }
 
-}
+} */
