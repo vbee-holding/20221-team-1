@@ -1,0 +1,18 @@
+.detail-team-demo {
+    color: white;
+    font-weight: bold;
+}
+
+.match-team-group-knock {
+    width: calc(100vw/1.5);
+    margin: 0 auto;
+    background-color: rgb(88, 81, 81);
+    min-height: 85vh;
+}
+
+.match-team-group,
+.match-team-knockout {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
