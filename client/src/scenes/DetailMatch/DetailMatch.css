@@ -1,0 +1,169 @@
+.date-time-match {
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: medium;
+}
+
+.detail-match {
+    width: calc(100vw/1.5);
+    margin: 0 auto;
+    color: white;
+    background-color: rgb(39, 34, 34);
+}
+
+.detail-match-score {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-team,
+.away-team {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: large;
+}
+
+.two-team-score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: larger;
+    flex-direction: column;
+
+}
+
+.home-team {
+    float: left;
+    margin: auto;
+}
+
+.away-team {
+    float: right;
+    margin: auto;
+}
+
+.info-detail-match {
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.score-team {
+    border: 1px solid wheat;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.home-team-score,
+.away-team-score {
+    display: flex;
+    flex-direction: column;
+    width: 22vw;
+}
+
+.home-team-score {
+    float: left;
+    margin-right: auto;
+}
+
+.icon-football {
+    text-align: center;
+}
+
+.away-team-score {
+    float: right;
+    margin-left: auto;
+}
+
+.info-player-goal {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.player-goal {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.video-highlight {
+    text-align: center;
+}
+
+.detail-match-tab {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coach-team {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    border: 1px solid wheat;
+    color: white;
+}
+
+.coach-home-team {
+    float: left;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.coach-away-team {
+    float: right;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.stadium {
+    text-align: center;
+}
+
+.bench-team {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bench-team-demo {
+    text-align: center;
+}
+
+.bench-team-detail {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid wheat;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.bench-home-team {
+    flex-grow: 1;
+    text-align: center;
+    border-right: 1px solid wheat;
+}
+
+.bench-away-team {
+    float: right;
+    margin-left: auto;
+    flex-grow: 1;
+    text-align: center;
+}
