@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getTopPlayer } from "../../apis/playerAPI";
 import Player from "../../containers/Player/Player";
-import './TopPlayer.css'
+import './TopPlayers.css'
 
 const TopPlayers = () => {
     const [topPlayer, setTopPlayer] = useState([]);

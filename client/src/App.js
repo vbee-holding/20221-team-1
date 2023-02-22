@@ -7,9 +7,9 @@ import AllMatches from './scenes/AllMatches/AllMatches';
 import MatchBracket from './scenes/MatchBracket/MatchBracket';
 // import PlayerByTeam from './scenes/PlayerByTeam/PlayerByTeam';
 // import RankByTeam from './scenes/RankByTeam/RankByTeam';
-// import Ranking from './scenes/Ranking/Ranking';
+import Ranking from './scenes/Ranking/Ranking';
 import Statistic from './scenes/Statistic/Statistic';
-import TopPlayers from './scenes/TopPlayer/TopPlayer'
+import TopPlayers from './scenes/TopPlayers/TopPlayers'
 import './App.css';
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
           {/* <Route path='/team/:idTeam/players' element={<PlayerByTeam />}></Route> */}
           {/* <Route path='/team/:idTeam/rank' element={<RankByTeam />}></Route> */}
           <Route path='/bracket' element={<MatchBracket />}></Route>
-          {/* <Route path='/rank' element={<Ranking />}></Route> */}
+          <Route path='/rank' element={<Ranking />}></Route>
         </Routes>
       </Router>
     </div>

@@ -1,0 +1,26 @@
+.rank-a-group {
+    width: fit-content;
+    margin-bottom: 5px;
+    border: 1px solid white;
+    background-color: rgb(88, 81, 81);
+    color: white;
+}
+
+
+th,
+td {
+    border-bottom: 1px solid wheat;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.nav-team {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-team:hover {
+    opacity: 0.4;
+}
