@@ -1,0 +1,70 @@
+.img-player {
+    width: 150px;
+    height: 180px;
+    border-bottom: 1px solid wheat;
+    padding: 5px;
+}
+
+.about-player {
+    width: 175px;
+    height: 305px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid wheat;
+}
+
+.about-player:hover {
+    cursor: pointer;
+}
+
+.name__postition {
+    min-height: 75px;
+}
+
+.name-player {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.position-player {
+    font-size: large;
+}
+
+.team-player {
+    border-top: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    min-height: 55px;
+    font-size: small;
+}
+
+.flag__team-player {
+    float: left;
+    width: 34px;
+    height: 33px;
+}
+
+.name__team-player {
+    margin-top: 3px;
+    margin-left: 50px;
+}
+
+.info-for-statistic {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-team-num {
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw/3);
+    float: right;
+    margin-left: auto;
+}
+
+.num-player-for-statistic {
+    float: right;
+    margin-left: auto;
+    padding-right: 5px;
+}
