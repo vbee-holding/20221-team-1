@@ -1,16 +1,16 @@
-nav{
+nav {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     background: #56042C;
     padding: 10px 10px 0px 10px;
-
 }
 
-#logo_wc{
+#logo_wc {
     max-height: 60px;
 }
-#navbar{
+
+#navbar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,14 +19,14 @@ nav{
     padding-top: 20px;
 }
 
-#navbar li{
+#navbar li {
     list-style: none;
     padding: 10px 20px;
     position: relative;
     border-bottom: solid 2px #56042C;
 }
 
-#navbar li a{
+#navbar li .a_nav {
     text-decoration: none;
     font-size: 1.2 rem;
     font-weight: 400;
@@ -34,7 +34,7 @@ nav{
     text-transform: uppercase;
 }
 
-#navbar li:hover{
+#navbar li:hover {
     background: #962d4c;
     border-bottom: solid 2px #fff;
 }
@@ -48,11 +48,12 @@ nav{
     color: #fff;
 }
 
-@media screen and (max-width: 769px) {
-    nav{
+/* @media screen and (max-width: 769px) {
+    nav {
         justify-content: space-between;
     }
-    #navbar{
+
+    #navbar {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -66,8 +67,8 @@ nav{
         padding: 40px 0px 0px 20px;
         transition: 0.4s ease-in-out;
     }
-    
-    #navbar.active{
+
+    #navbar.active {
         right: 0px;
     }
 
@@ -81,5 +82,5 @@ nav{
         font-size: 24px;
 
     }
-    
-}
+
+} */
