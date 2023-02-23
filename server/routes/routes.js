@@ -1,45 +1,54 @@
 const express = require('express');
-const homeController = require('../controllers/homeController')
+const coachController = require('../controllers/coachController');
+const venueController = require('../controllers/venueController');
+const teamController = require('../controllers/teamController');
+const playerController = require('../controllers/playerController');
+const matchController = require('../controllers/matchController');
+const groupController = require('../controllers/groupController');
+const knockoutController = require('../controllers/knockoutController');
+const statisticController = require('../controllers/statisticController');
+const postController = require('../controllers/postController');
+
 const route = express.Router();
 
 // coach
-route.get('/coaches', homeController.getAllCoach);
-route.get('/coaches/:id', homeController.getCoach);
-route.get('/coaches/team/:teamId', homeController.getCoachByTeamId);
+route.get('/coaches', coachController.getAllCoach);
+route.get('/coaches/:id', coachController.getCoach);
+route.get('/coaches/team/:teamId', coachController.getCoachByTeamId);
 
 // venue
-route.get('/stadiums', homeController.getAllVenue);
-route.get('/stadiums/:id', homeController.getVenue);
+route.get('/stadiums', venueController.getAllVenue);
+route.get('/stadiums/:id', venueController.getVenue);
 
 // team
-route.get('/teams', homeController.getAllTeams);
-route.get('/teams/:id', homeController.getTeam);
+route.get('/teams', teamController.getAllTeams);
+route.get('/teams/:id', teamController.getTeam);
 
 // player
-route.get('/players', homeController.getAllPlayers);
-route.get('/players/:id', homeController.getPlayer);
-route.get('/players-top50', homeController.getTopPlayer);
-route.get('/player/:teamId', homeController.getPlayerByTeam);
+route.get('/players', playerController.getAllPlayers);
+route.get('/players/:id', playerController.getPlayer);
+route.get('/players-top50', playerController.getTopPlayer);
+route.get('/player/:teamId', playerController.getPlayerByTeam);
 
 // groups
-route.get('/group-stage', homeController.getAllGroup);
-route.get('/group-stage/:letter', homeController.getGroup);
-route.get('/group-stage/team/:idTeam', homeController.getGroupByTeamId);
+route.get('/group-stage', groupController.getAllGroup);
+route.get('/group-stage/:letter', groupController.getGroup);
+route.get('/group-stage/team/:idTeam', groupController.getGroupByTeamId);
 
 // matches 
-route.get('/matches', homeController.getAllMatches);
-route.get('/matches/:id', homeController.getMatch);
+route.get('/matches', matchController.getAllMatches);
+route.get('/matches/:id', matchController.getMatch);
 
 // knock-out
-route.get('/knockout-stage', homeController.getAllKnockoutStage);
-route.get('/knockout-stage/:idTeam', homeController.getKnockoutStageById);
+route.get('/knockout-stage', knockoutController.getAllKnockoutStage);
+route.get('/knockout-stage/:idTeam', knockoutController.getKnockoutStageById);
 
 // statistic
-route.get('/statistic', homeController.getStatistic);
+route.get('/statistic', statisticController.getStatistic);
 
 // post 
-route.get('/posts', homeController.getAllPost);
-route.get('/posts/:idTeam', homeController.getPostAboutTeam);
-route.get('/post/:matchId', homeController.getPostAboutMatch);
+route.get('/posts', postController.getAllPost);
+route.get('/posts/:idTeam', postController.getPostAboutTeam);
+route.get('/post/:matchId', postController.getPostAboutMatch);
 
 module.exports = route;
