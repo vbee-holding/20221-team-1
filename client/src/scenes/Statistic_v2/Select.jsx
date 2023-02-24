@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SelectReact from "react-select";
-import { SELECT_OPTION } from "../../config";
+import { SELECT_OPTION } from "../../constant";
 import "./Select.css";
 
 const Select = (props) => {
