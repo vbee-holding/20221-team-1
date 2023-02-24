@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Statistic.css";
 import { fetchApi } from "../../apis";
-import { SELECT_OPTION, TABLE_HEADER } from "../../config";
+import { SELECT_OPTION, TABLE_HEADER } from "../../constant";
 import DOMAIN from "../../config";
-import Select from "../../components/select/Select";
+import Select from "./Select"
 import Table from "../../containers/Table/Table";
 
 const Statistic = () => {
@@ -18,7 +18,7 @@ const Statistic = () => {
         setTableHeader(TABLE_HEADER[_selected.value]);
     };
 
-    const LoadData = async (field) => {
+    const loadData = async (field) => {
         const listPlayer = await fetchApi(`${DOMAIN}/players`);
         switch (selected.value) {
             case "goal":
@@ -48,7 +48,6 @@ const Statistic = () => {
                 const listMatches = await fetchApi(`${DOMAIN}/matches`);
                 listMatches.sort((a, b) => b["attendance"] - a["attendance"]);
                 listMatches.length = 10;
-                console.log(listMatches);
                 const _listMatches = listMatches.map((match) => {
                     return {
                         match: `${match.home_team.name}-${match.away_team.name}`,
@@ -65,7 +64,7 @@ const Statistic = () => {
 
     useEffect(() => {
         setData([]);
-        LoadData(selected.value);
+        loadData(selected.value);
     }, [selected.value]);
 
     return (
