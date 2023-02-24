@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { getAllPost, getPostByTeam } from '../../apis/postAPI';
 import DetailPost from '../../containers/DetailPost/DetailPost';
+import './Post.css'
 
 export const AllPost = () => {
     const [posts, setPosts] = useState([]);
@@ -40,12 +41,15 @@ export const PostAboutTeam = () => {
     }, []);
 
     return (
-        <div style={{ width: 'calc(100vw/1.5)', height: '85vh', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '0 auto', backgroundColor: 'gray' }}>
-            {postAboutTeam.map((post, index) => {
-                return (
-                    <div key={index}><DetailPost post={post} /></div>
-                )
-            })}
+        <div>
+            <SubNavForTeam idTeam={idTeam} />
+            <div className='post-team' >
+                {postAboutTeam.map((post, index) => {
+                    return (
+                        <div className='post-team-detail' key={index}><DetailPost post={post} /></div>
+                    )
+                })}
+            </div>
         </div>
     )
 }

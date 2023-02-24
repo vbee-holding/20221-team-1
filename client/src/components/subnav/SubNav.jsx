@@ -1,13 +1,22 @@
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import './SubNav.css'
 
 export const SubNavForTeam = (props) => {
+    const reload = () => {
+        window.location.reload();
+    }
+    const { idTeam } = props;
     return (
-        <ul className="sub-nav">
-            <li><NavLink className='navlink_sub_nav' to=''>Trận đấu</NavLink></li>
-            <li><NavLink className='navlink_sub_nav' to='post'>Tin tức</NavLink></li>
-            <li><NavLink className='navlink_sub_nav' to='rank'>Bảng xếp hạng</NavLink></li>
-            <li><NavLink className='navlink_sub_nav' to='players'>Cầu thủ</NavLink></li>
-        </ul>
+        <>
+            <div className="team-detail-header">
+                <h3>Thông tin đội tuyển: {idTeam}</h3>
+            </div>
+            <ul className="sub-nav">
+                <li  onClick={reload}><Link className='navlink_sub_nav' to={`/team/${idTeam}`} >Trận đấu</Link></li>
+                <li  onClick={reload}><Link className='navlink_sub_nav' to={`/team/${idTeam}/postbyteam`} >Tin tức</Link></li>
+                <li  onClick={reload}><Link className='navlink_sub_nav' to={`/team/${idTeam}/rankbyteam`} >Bảng xếp hạng</Link></li>
+                <li  onClick={reload}><Link className='navlink_sub_nav' to={`/team/${idTeam}/playersbyteam`} >Cầu thủ</Link></li>
+            </ul>
+        </>
     )
 }
