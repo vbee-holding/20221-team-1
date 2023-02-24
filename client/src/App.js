@@ -24,9 +24,9 @@ function App() {
           <Route path='/statistic' element={<Statistic />}></Route>
           <Route path='/posts' element={<AllPost />}></Route>
           <Route path='/team/:id' element={<DetailTeam />}></Route>
-          <Route path='/team/:idTeam/post' element={<PostAboutTeam />}></Route>
-          <Route path='/team/:idTeam/players' element={<PlayerByTeam />}></Route>
-          <Route path='/team/:idTeam/rank' element={<RankByTeam />}></Route>
+          <Route path='/team/:idTeam/postbyteam' element={<PostAboutTeam />}></Route>
+          <Route path='/team/:idTeam/playersbyteam' element={<PlayerByTeam />}></Route>
+          <Route path='/team/:idTeam/rankbyteam' element={<RankByTeam />}></Route>
           <Route path='/bracket' element={<MatchBracket />}></Route>
           <Route path='/rank' element={<Ranking />}></Route>
         </Routes>
