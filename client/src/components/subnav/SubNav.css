@@ -1,15 +1,16 @@
 .sub-nav {
-    background-color: #56042C;
+    background-color: #8A1538;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
     list-style: none;
-    margin: 0 0 0 0;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .sub-nav li {
-    padding: 10px 20px;
+    padding: 10px 10px;
+    border-bottom: solid 2px #8A1538;
+    font-weight:350;
 }
 
 .sub-nav li:hover {
@@ -23,4 +24,28 @@
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+}
+.team-detail-header{
+    border-top: solid 1px #737373;
+    text-align: left;
+    background-color:#56042C;
+    padding-left: 18%;
+    padding-top: 8px;
+    padding-bottom: 15px;
+}
+.team-detail-header h3{
+    margin: 0px;
+    color: aliceblue;
+    font-weight: normal;
+    font-size: medium;
+}
+@media screen and (max-width:480px) {
+    .sub-nav {
+        flex-direction: column;
+        padding-left: 0px;
+      }
+      .sub-nav li {
+        padding: 7px 0px;
+        font-size: small;
+      }
 }

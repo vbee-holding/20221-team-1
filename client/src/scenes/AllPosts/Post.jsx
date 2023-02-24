@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { getAllPost, getPostByTeam } from '../../apis/postAPI';
+import { getAllPost, getPostByMatch, getPostByTeam } from '../../apis/postAPI';
 import DetailPost from '../../containers/DetailPost/DetailPost';
-
+import { SubNavForTeam } from '../../components/subnav/SubNav';
+import './Post.css'
 export const AllPost = () => {
     const [posts, setPosts] = useState([]);
 
@@ -40,8 +41,35 @@ export const PostAboutTeam = () => {
     }, []);
 
     return (
-        <div style={{ width: 'calc(100vw/1.5)', height: '85vh', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '0 auto', backgroundColor: 'gray' }}>
-            {postAboutTeam.map((post, index) => {
+        <div>
+            <SubNavForTeam idTeam={idTeam} />
+            <div className='post-team' >
+                {postAboutTeam.map((post, index) => {
+                    return (
+                        <div className='post-team-detail' key={index}><DetailPost post={post} /></div>
+                    )
+                })}
+            </div>
+        </div>
+    )
+}
+
+export const PostAboutMatch = (props) => {
+    const [postAboutMatch, setPostAboutMatch] = useState([]);
+
+    const idMatch = props.idMatch;
+    const loadPostAboutMatch = async () => {
+        const result = await getPostByMatch(idMatch)
+        setPostAboutMatch(result);
+    }
+
+    useEffect(() => {
+        loadPostAboutMatch();
+    }, [])
+
+    return (
+        <div>
+            {postAboutMatch.map((post, index) => {
                 return (
                     <div key={index}><DetailPost post={post} /></div>
                 )
