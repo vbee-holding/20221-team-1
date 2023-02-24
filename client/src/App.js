@@ -1,14 +1,15 @@
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/header/Header';
 import AllMatches from './scenes/AllMatches/AllMatches';
-import { AllPost, PostAboutTeam } from './scenes/AllPosts/Post';
+import { PostAboutTeam } from './scenes/AllPosts/Post';
+import Post from './scenes/AllPosts_v2/AllPosts';
 import DetailMatch from './scenes/DetailMatch/DetailMatch';
 import DetailTeam from './scenes/DetailTeam/DetailTeam';
 import MatchBracket from './scenes/MatchBracket/MatchBracket';
 import PlayerByTeam from './scenes/PlayerByTeam/PlayerByTeam';
 import RankByTeam from './scenes/RankByTeam/RankByTeam';
 import Ranking from './scenes/Ranking/Ranking';
-import Statistic from './scenes/Statistic/Statistic';
+import Statistic from './scenes/Statistic_v2/Statistic';
 import TopPlayers from './scenes/TopPlayers/TopPlayers'
 import './App.css';
 
@@ -22,7 +23,7 @@ function App() {
           <Route path='/matches/:id' element={<DetailMatch />}></Route>
           <Route path='/topPlayer' element={<TopPlayers />}></Route>
           <Route path='/statistic' element={<Statistic />}></Route>
-          <Route path='/posts' element={<AllPost />}></Route>
+          <Route path='/posts' element={<Post />}></Route>
           <Route path='/team/:id' element={<DetailTeam />}></Route>
           <Route path='/team/:idTeam/post' element={<PostAboutTeam />}></Route>
           <Route path='/team/:idTeam/players' element={<PlayerByTeam />}></Route>

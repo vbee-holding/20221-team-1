@@ -1,0 +1,28 @@
+.container-statistic {
+    margin: 0 auto;
+    width: calc(100vw / 1.5);
+    min-height: 100vh;
+    background-color: gray;
+    padding: 20px 10px;
+
+    padding: 1rem;
+}
+
+table {
+    border-spacing: 0;
+    /* border: 1px solid black; */
+    width: 100%;
+    text-align: left;
+}
+
+th,
+td {
+    color: white;
+    font-size: 18px;
+    padding: 1rem;
+    border: 1px solid white;
+}
+
+td {
+    background-color: rgb(88, 81, 81);
+}
