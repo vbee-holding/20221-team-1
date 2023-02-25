@@ -1,21 +1,41 @@
 .all-matches {
     width: calc(100vw/1.5);
     margin: 0 auto;
-    background-color: rgb(88, 81, 81);
+    background-color: #545454;
+    /* margin-left: 10px; */
 }
 
 .date-match {
     color: white;
     font-size: medium;
-    text-decoration: underline;
-    margin-bottom: 7px;
+    margin: 15px 0px 10px 50px;
 }
 
 .about-day-match {
     display: grid;
     grid-template-columns: auto auto;
     gap: 5px;
-
     width: calc(100vw/1.6);
     margin: 0 auto;
+}
+@media screen and (max-width: 769px) {
+    .all-matches{
+        width: calc(100vw/1.1);
+    }
+    .about-day-match {
+        display: grid;
+        grid-template-columns: auto;
+        width: calc(100vw/1.2);        
+    }
+}
+@media screen and (min-width: 770px) and (max-width: 1200px) {
+    .all-matches{
+        align-items: center;
+        width: 100vw;
+    }
+    .about-day-match{
+        width: 90vw;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
 }

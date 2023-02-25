@@ -14,20 +14,18 @@ const DetailTeam = () => {
     const GroupMatch = GroupByTeam({ idTeam });
 
     const KnockoutMatch = KnockoutByTeam({ idTeam });
-
     return (
-        <div>
-            <div style={{ color: 'white', textAlign: 'center', backgroundColor: '#56042C', border: '1px solid wheat' }}>Thông tin về {idTeam}</div>
-            <SubNavForTeam />
+        <div className='team-match-detail'>
+            <SubNavForTeam idTeam={idTeam} />
             <div className="match-team-group-knock">
                 {
                     GroupMatch && (
                         <>
-                            <div className='detail-team-demo'>Trận đấu vòng bảng</div>
+                            <div style={{ color: 'white', fontWeight: 'bold', margin:'0px 0px 10px 30px' }}>Trận đấu vòng bảng</div>
                             <div className="match-team-group">
                                 {GroupMatch.map((match, index) => {
                                     return (
-                                        <div key={index}>
+                                        <div className='match-box' key={index}>
                                             <Match idMatch={match.id} />
                                         </div>
                                     )
@@ -38,11 +36,11 @@ const DetailTeam = () => {
                 {
                     KnockoutMatch && (
                         <>
-                            <div className='detail-team-demo'>Trận đấu loại vòng loại trực tiếp</div>
+                            <div style={{ color: 'white', fontWeight: 'bold', margin:'15px 0px 10px 30px' }}>Trận đấu loại vòng loại trực tiếp</div>
                             <div className="match-team-knockout">
                                 {KnockoutMatch.map((match, index) => {
                                     return (
-                                        <div key={index}>
+                                        <div className='match-box' key={index}>
                                             <Match idMatch={match.id} />
                                         </div>
                                     )

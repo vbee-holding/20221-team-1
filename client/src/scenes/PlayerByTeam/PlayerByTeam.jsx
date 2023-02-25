@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { getPlayerByTeam } from "../../apis/playerAPI";
 import Player from "../../containers/Player/Player";
 import './PlayerByTeam.css';
-
+import { SubNavForTeam } from "../../components/subnav/SubNav";
 const PlayerByTeam = () => {
     const [playerByTeam, setPlayerByTeam] = useState([]);
 
@@ -20,6 +20,7 @@ const PlayerByTeam = () => {
 
     return (
         <>
+        <SubNavForTeam idTeam={idTeam} />
             {playerByTeam &&
                 <div className="all-team-player">
                     {playerByTeam.map((player, index) => {
