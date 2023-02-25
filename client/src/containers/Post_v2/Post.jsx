@@ -5,15 +5,17 @@ const Post = (props) => {
     const { header, imgUrl, URL } = props.info;
 
     return (
-        <div className="post">
-            <div>
-                <img src={imgUrl} alt={header} />
+        <a href={URL}>
+            <div className="post">
+                <div>
+                    <img src={imgUrl} alt={header} />
+                </div>
+                <div>
+                    <h3>{header}</h3>
+                    <p>Nguồn: {URL}</p>
+                </div>
             </div>
-            <div>
-                <h3>{header}</h3>
-                <p>Nguồn: {URL}</p>
-            </div>
-        </div>
+        </a>
     );
 };
 
