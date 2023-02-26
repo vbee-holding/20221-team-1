@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 import { getMatch } from '../../apis/matchAPI';
 import { InfoTeam } from '../../containers/Team/Team';
 import Thumbnail from '../../containers/ThumbnailVideo/Thumbnail';
-import MatchTab from '../../components/matchTab/MatchTab';
 import Coach from '../../containers/Coach/Coach';
 import CustomModal from '../../components/customModal/CustomModal';
 import './DetailMatch.css';
@@ -159,7 +158,7 @@ const DetailMatch = () => {
                             </div>
 
                             <div className="detail-match-tab">
-                                <MatchTab detail={detailMatch} homeTeam={homeTeam} awayTeam={awayTeam} />
+                                MatchTab
                             </div>
 
                             <div className="coach-team">
