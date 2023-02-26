@@ -1,8 +1,8 @@
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/header/Header';
 import AllMatches from './scenes/AllMatches/AllMatches';
-import { PostAboutTeam } from './scenes/AllPosts/Post';
-import Post from './scenes/AllPosts_v2/AllPosts';
+import { PostAboutTeam } from './scenes/PostForMatchTeam/Post';
+import Post from './scenes/AllPosts/AllPosts';
 import DetailMatch from './scenes/DetailMatch/DetailMatch';
 import DetailTeam from './scenes/DetailTeam/DetailTeam';
 import MatchBracket from './scenes/MatchBracket/MatchBracket';

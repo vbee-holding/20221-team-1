@@ -1,0 +1,16 @@
+.team-event-detail {
+    border: 1px solid white;
+    background-color: gray;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.info-of-event {
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+
+.type-of-event {
+    text-transform: uppercase;
+}
