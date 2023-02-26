@@ -5,7 +5,7 @@ const Post = (props) => {
     const { header, imgUrl, URL } = props.info;
 
     return (
-        <a href={URL}>
+        <a href={URL} target="_blank" >
             <div className="post">
                 <div>
                     <img src={imgUrl} alt={header} />
