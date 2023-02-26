@@ -11,3 +11,12 @@
     width: 15rem;
     height: 8rem;
 }
+
+.post:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
