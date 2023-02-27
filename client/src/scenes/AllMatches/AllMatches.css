@@ -1,14 +1,16 @@
 .all-matches {
     width: calc(100vw/1.5);
     margin: 0 auto;
-    background-color: #545454;
+    background-color: #E3E2DF;
     /* margin-left: 10px; */
+    padding: 5px 0px 20px 0px;
 }
 
 .date-match {
-    color: white;
+    color: #56042C;
     font-size: medium;
-    margin: 15px 0px 10px 50px;
+    font-weight: 600;
+    margin: 25px 0px 10px 40px;
 }
 
 .about-day-match {

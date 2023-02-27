@@ -4,8 +4,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     color: white;
+    padding: 5px;
 }
 
 .home-team-formation,
@@ -22,9 +23,18 @@
 }
 
 .shirt-number {
-    border: 1px solid black;
+    border: 1px solid beige;
     border-radius: 40%;
     background-color: rgba(50, 50, 206);
+    min-width: 25px;
+    text-align: center;
+}
+.shirt-number-home{
+    border: 1px solid beige;
+    border-radius: 40%;
+    background-color: red;
+    min-width: 25px;
+    text-align: center;
 }
 
 .home-defender,
