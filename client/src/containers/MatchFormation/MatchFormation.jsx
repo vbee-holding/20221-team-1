@@ -55,7 +55,7 @@ const MatchFormation = (props) => {
                         <div className='two-team-formation'>
                             <div className="home-team-formation">
                                 <div className="home-goal-keeper">
-                                    <div className='shirt-number'>{playerHomeTeam.Goalkeeper[0].shirt_number}</div>
+                                    <div className='shirt-number-home'>{playerHomeTeam.Goalkeeper[0].shirt_number}</div>
                                     <div className="name-home-goal-keeper">{playerHomeTeam.Goalkeeper[0].name}</div>
                                 </div>
 
@@ -63,7 +63,7 @@ const MatchFormation = (props) => {
                                     {playerHomeTeam.Defender.map((player, index) => {
                                         return (
                                             <div key={index} className="detail-home-defender">
-                                                <div className="shirt-number">{player.shirt_number}</div>
+                                                <div className="shirt-number-home">{player.shirt_number}</div>
                                                 <div className="name-home-def">{player.name}</div>
                                             </div>
                                         )
@@ -74,7 +74,7 @@ const MatchFormation = (props) => {
                                     {playerHomeTeam.Midfielder.map((player, index) => {
                                         return (
                                             <div key={index} className="detail-home-mid">
-                                                <div className="shirt-number">{player.shirt_number}</div>
+                                                <div className="shirt-number-home">{player.shirt_number}</div>
                                                 <div className="name-home-mid">{player.name}</div>
                                             </div>
                                         )
@@ -85,7 +85,7 @@ const MatchFormation = (props) => {
                                     {playerHomeTeam.Forward.map((player, index) => {
                                         return (
                                             <div key={index} className="detail-home-forward">
-                                                <div className="shirt-number">{player.shirt_number}</div>
+                                                <div className="shirt-number-home">{player.shirt_number}</div>
                                                 <div className="name-home-forward">{player.name}</div>
                                             </div>
                                         )

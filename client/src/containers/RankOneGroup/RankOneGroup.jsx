@@ -46,7 +46,7 @@ const RankOneGroup = ({ letter }) => {
             {rankGroup && teamOfGroup && pointTeamGroup &&
                 (
                     <div className="rank-a-group">
-                        <div className="letter-group">Bảng {letter}</div>
+                        <div className="letter-group"><h4>Bảng {letter}</h4></div>
                         <table>
                             <thead>
                                 <tr>

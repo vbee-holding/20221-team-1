@@ -38,7 +38,6 @@ const AllMatches = () => {
 
     return (
         <div className="all-matches">
-            *Nếu trang không hiển thị gì, vui lòng refresh lại trang
             {matches && dateMatch &&
                 dateMatch.map((date, index) => {
                     return (

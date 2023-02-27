@@ -1,9 +1,10 @@
 .date-time-match {
-    background-color: red;
+    background-color: #8A1538;
     color: white;
     text-align: center;
     font-weight: 600;
     font-size: medium;
+    padding: 5px;
 }
 
 .detail-match {
@@ -16,6 +17,7 @@
 .detail-match-score {
     display: flex;
     flex-direction: row;
+    padding: 10px;
 }
 
 .home-team,
@@ -67,6 +69,7 @@
     display: flex;
     flex-direction: column;
     width: 22vw;
+    padding: 5px;
 }
 
 .home-team-score {
@@ -76,6 +79,7 @@
 
 .icon-football {
     text-align: center;
+    padding: 5px;
 }
 
 .away-team-score {
@@ -112,10 +116,8 @@
     align-items: center;
     justify-content: center;
 
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-
+    margin: 10px 20px 0px 20px;
+    padding: 10px;
     border: 1px solid wheat;
     color: white;
 }
@@ -134,17 +136,17 @@
 
 .stadium {
     text-align: center;
+    margin: 10px;
 }
 
 .bench-team {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .bench-team-demo {
     text-align: center;
+    padding: 10px;
 }
 
 .bench-team-detail {
@@ -159,6 +161,7 @@
     flex-grow: 1;
     text-align: center;
     border-right: 1px solid wheat;
+    padding: 10px;
 }
 
 .bench-away-team {
@@ -166,4 +169,5 @@
     margin-left: auto;
     flex-grow: 1;
     text-align: center;
+    padding: 10px;
 }

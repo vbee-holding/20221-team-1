@@ -15,7 +15,8 @@
 .match-box{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    padding-left: 20px;
 }
 @media screen and (min-width: 770px) and (max-width: 1200px){
     .match-team-group-knock {
@@ -24,7 +25,7 @@
 }
 @media screen and (max-width: 769px){
     .match-team-group-knock {
-        width: 80vw;
+        width: 90vw;
     }
     .match-team-group,
     .match-team-knockout {

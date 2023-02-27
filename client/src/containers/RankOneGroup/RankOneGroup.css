@@ -1,11 +1,19 @@
 .rank-a-group {
     width: fit-content;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     border: 1px solid white;
     background-color: rgb(88, 81, 81);
     color: white;
 }
 
+.letter-group{
+    background-color: #56042C;
+}
+.letter-group h4{
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 10px 0px 10px 10px;
+}
 
 th,
 td {
