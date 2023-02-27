@@ -1,4 +1,4 @@
-## Link demo sản phầm: https://inspiring-selkie-b286a2.netlify.app/
+## Link demo sản phầm: https://worldcuppro2022.netlify.app/
 ## Cách cài đặt chương trình
 
 ## Bước 1: Clone code từ repo về máy bằng lệnh
