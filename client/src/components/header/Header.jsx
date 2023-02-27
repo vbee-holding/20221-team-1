@@ -8,10 +8,6 @@ const Header = () => {
         setState(!state);
     }
 
-    const reload = () => {
-        window.location.reload();
-    }
-
     return (
         <nav>
             <div>
@@ -22,12 +18,12 @@ const Header = () => {
 
             <div>
                 <ul id="navbar" className={state ? "#navbar active" : "#navbar"}>
-                    <li onClick={reload} ><NavLink className='a_nav' to='/'>Trận đấu</NavLink></li>
-                    <li onClick={reload}><NavLink className='a_nav' to='/posts'>Tin tức</NavLink></li>
-                    <li onClick={reload}><NavLink className='a_nav' to='/bracket'>Sơ đồ thi đấu</NavLink></li>
-                    <li onClick={reload}><NavLink className='a_nav' to='/topPlayer'>Cầu thủ</NavLink></li>
-                    <li onClick={reload}><NavLink className='a_nav' to='/rank'>Bảng xếp hạng</NavLink></li>
-                    <li onClick={reload}><NavLink className='a_nav' to='/statistic'>Số liệu thống kê</NavLink></li>
+                    <li><NavLink className='a_nav' to='/'>Trận đấu</NavLink></li>
+                    <li><NavLink className='a_nav' to='/posts'>Tin tức</NavLink></li>
+                    <li><NavLink className='a_nav' to='/bracket'>Sơ đồ thi đấu</NavLink></li>
+                    <li><NavLink className='a_nav' to='/topPlayer'>Cầu thủ</NavLink></li>
+                    <li><NavLink className='a_nav' to='/rank'>Bảng xếp hạng</NavLink></li>
+                    <li><NavLink className='a_nav' to='/statistic'>Số liệu thống kê</NavLink></li>
                 </ul>
             </div>
 
