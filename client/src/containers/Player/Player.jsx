@@ -8,15 +8,13 @@ const Player = (props) => {
     const [player, setPlayer] = useState({});
 
     const id = props.playerId;
-    const isInfo = props.isInfo;
 
     const loadPlayer = async () => {
         const result = await getPlayer(id);
         setPlayer(result);
     }
 
-    const idTeam = player.idTeam;
-    const Info = InfoTeam({ idTeam });
+    const Info = InfoTeam({ idTeam: player.idTeam });
 
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -33,43 +31,25 @@ const Player = (props) => {
                 handleClose={handleClose}
                 player={player}
             />
-            {!isInfo && (
-                <div className="about-player" onClick={handleOpen}>
-                    <div className="img-player-div">
-                        <img src={player.pictureUrl} alt="player" className="img-player" />
-                    </div>
-                    <div className="name__postition">
-                        <div className="name-player">
-                            {player.name}
-                        </div>
-                        <div className="position-player">
-                            {player.position}
-                        </div>
-                    </div>
-                    <div className="team-player">
-                        <img className="flag__team-player" src={Info[0]} />
-                        <div className="name__team-player">
-                            {Info[1]}
-                        </div>
-                    </div>
+            <div className="about-player" onClick={handleOpen}>
+                <div className="img-player-div">
+                    <img src={player.pictureUrl} alt="player" className="img-player" />
                 </div>
-            )}
-
-            {isInfo && (
-                <div className="info-for-statistic">
-                    <div className="name-player-for-statistic">
+                <div className="name__postition">
+                    <div className="name-player">
                         {player.name}
                     </div>
-                    <div className="info-team-num">
-                        <div className="team-player-for-statistic">
-                            {player.idTeam}
-                        </div>
-                        <div className="num-player-for-statistic">
-                            {isInfo}
-                        </div>
+                    <div className="position-player">
+                        {player.position}
                     </div>
                 </div>
-            )}
+                <div className="team-player">
+                    <img className="flag__team-player" src={Info[0]} />
+                    <div className="name__team-player">
+                        {Info[1]}
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

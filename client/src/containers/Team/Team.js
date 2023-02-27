@@ -3,18 +3,18 @@ import { getTeam } from "../../apis/teamAPI";
 
 export const InfoTeam = ({ idTeam }) => {
     const [team, setTeam] = useState({});
+    // const [loading, setLoading] = useState(true);
 
     const loadTeam = async () => {
-        try {
-            const result = await getTeam(idTeam);
-            setTeam(result);
-        } catch (error) {
-            console.log(error);
-        }
+        const result = await getTeam(idTeam);
+        setTeam(result);
+        // setLoading(false)
     }
 
     useEffect(() => {
-        loadTeam();
+        if (idTeam) {
+            loadTeam();
+        }
     }, [idTeam])
 
     return team && [team.flag, team.name, team.group_letter];
